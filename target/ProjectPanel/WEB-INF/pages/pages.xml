@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="welcome" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/welcome.jsp" />
+	</definition>
+
+	<definition name="login" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+	</definition>
+	
+	<definition name="admin" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin.jsp" />
+	</definition>
+	
+	<definition name="devroom" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/devroom.jsp" />
+	</definition>
+	
+</tiles-definitions>
