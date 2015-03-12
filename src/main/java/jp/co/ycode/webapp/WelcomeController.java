@@ -47,7 +47,7 @@ public class WelcomeController
 		return model;
 	}
 	
-	@RequestMapping(value = {"/", "/devroom**"}, method = RequestMethod.GET)
+	@RequestMapping(value = "/devroom**", method = RequestMethod.GET)
     public String processGetDevroom()
     {
 		return "devroom";
