@@ -11,10 +11,12 @@ public class PageFactory {
 	
 	static
 	{
-		URL_MAP.put(WelcomePage.class, "http://localhost:8080/SpringMVC/welcome");
-		URL_MAP.put(LoginPage.class, "http://localhost:8080/SpringMVC/login");
+		URL_MAP.put(WelcomePage.class, "http://localhost:8080/welcome");
+		URL_MAP.put(LoginPage.class, "http://localhost:8080/login");
+		URL_MAP.put(SignupPage.class, "http://localhost:8080/signup");
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static <T extends Page> T get(Class<T> pageClass)
 	{
 		T page;

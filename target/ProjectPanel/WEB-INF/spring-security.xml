@@ -8,8 +8,9 @@
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
-	<http auto-config="true">
-		<intercept-url pattern="/admin**" access="ROLE_USER" />
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/admin" access="hasRole('ROLE_GENERAL')" />
+		<intercept-url pattern="/admin/**" access="hasRole('ROLE_GENERAL')" />
 		<form-login 
 		    login-page="/login" 
 		    default-target-url="/admin" 
@@ -20,13 +21,24 @@
 		<csrf/>
 	</http>
 
+	<!--
 	<authentication-manager>
 		<authentication-provider>
 			<user-service>
-				<user name="yas" password="1234" authorities="ROLE_USER,ROLE_PM" />
-				<user name="george" password="1234" authorities="ROLE_USER" />
+				<user name="yas" password="1234" authorities="ROLE_GENERAL,ROLE_PREMIUM" />
+				<user name="george" password="1234" authorities="ROLE_GENERAL" />
 			</user-service>
 		</authentication-provider>
+	</authentication-manager>
+	-->
+	<authentication-manager>
+	  <authentication-provider>
+		<jdbc-user-service data-source-ref="dataSource"
+		  users-by-username-query=
+		    "select user_name as username, password, enabled from app_user where user_name = ?"
+		  authorities-by-username-query=
+		    "select u.user_name as username, r.role from app_user_role r join app_user u on r.user_id = u.user_id where u.user_name = ?" />
+	  </authentication-provider>
 	</authentication-manager>
 
 </beans:beans>

@@ -11,7 +11,7 @@ public class WelcomePage extends Page {
 	@FindBy(how = How.CSS, using = "#HomePage h1")
     public WebElement homePageTitle;
 	
-	public void isDisplayedCheck(){
+	public void waitPageReady(){
 		this.logger.info("Checking login page is displayed");
 		BrowserDriver.waitForElement(this.homePageTitle);
 		this.homePageTitle.isDisplayed();

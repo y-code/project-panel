@@ -32,7 +32,7 @@ public class LoginPage extends Page {
 	@FindBy(how = How.CSS, using = "#login-box input[name=submit]")
     public WebElement submitButton;
 
-	public  void isDisplayedCheck(){
+	public void waitPageReady(){
 		this.logger.info("Checking login page is displayed");
 		BrowserDriver.waitForElement(this.loginBoxDiv);
 		this.loginBoxDiv.isDisplayed();
@@ -48,7 +48,7 @@ public class LoginPage extends Page {
 	
 	public void checkLoginSuccess(){
 		this.logger.info("Check login was successful");
-		this.isDisplayedCheck();	
+		this.waitPageReady();	
 	}
 	
 	public void checkLoginErrors(){

@@ -15,7 +15,7 @@ public class TestSteps {
 	public static void given_I_navigate_to_the_mock_application(){
 		LoginPage page = PageFactory.get(LoginPage.class);
 		BrowserDriver.loadPage(page.getUrl());
-		page.isDisplayedCheck();
+		page.waitPageReady();
 	}
 
 	public static void when_I_try_to_login(String credentialsType) {

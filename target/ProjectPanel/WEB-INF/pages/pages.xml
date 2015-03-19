@@ -10,6 +10,7 @@
 
 	<definition name="login" extends="default">
 	    <put-attribute name="body" value="/WEB-INF/pages/login.jsp" />
+	    <put-attribute name="body2" value="/WEB-INF/pages/signuplink.jsp" />
 	</definition>
 	
 	<definition name="admin" extends="default">
@@ -18,6 +19,31 @@
 	
 	<definition name="devroom" extends="default">
 	    <put-attribute name="body" value="/WEB-INF/pages/devroom.jsp" />
+	</definition>
+	
+	<definition name="signup" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/signup.jsp" />
+	</definition>
+	
+	<definition name="signedup" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/signedup.jsp" />
+	    <put-attribute name="body2" value="/WEB-INF/pages/login.jsp" />
+	</definition>
+	
+	<definition name="admin/project" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin/project.jsp" />
+	</definition>
+	
+	<definition name="projectpanel" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/projectpanel.jsp" />
+	</definition>
+	
+	<definition name="premiumsignup" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/premiumsignup.jsp" />
+	</definition>
+	
+	<definition name="error" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/error.jsp" />
 	</definition>
 	
 </tiles-definitions>

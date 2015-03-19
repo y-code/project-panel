@@ -18,4 +18,5 @@ public abstract class Page {
 		this.url = url;
 	}
 	
+	public abstract void waitPageReady();
 }

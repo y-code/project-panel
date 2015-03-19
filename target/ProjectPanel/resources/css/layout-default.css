@@ -69,6 +69,7 @@ h1 a {
 	text-align: center;
 }
 .intro,
+.toolbar,
 .main,
 .footer {
 	float: right;
@@ -78,6 +79,12 @@ h1 a {
 	margin-top: 117px;
 }
 .intro div {
+	line-height: 1.4;
+}
+.toolbar {
+	margin-top: 117px;
+}
+.toolbar div {
 	line-height: 1.4;
 }
 .nav ul {
@@ -110,6 +117,11 @@ li.first a {
 .intro h2 {
 	font: normal 2em "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
 	text-align: center;
+	margin-bottom: 0.25em;
+}
+.toolbar h2 {
+	font: normal 1em "Hoefler Text", "Baskerville old face", Garamond, "Times New Roman", serif;
+	text-align: right;
 	margin-bottom: 0.25em;
 }
 .main h2 {
@@ -163,6 +175,11 @@ li#f-winter {
 .footer p {
 	margin-bottom: 0.5em;
 }
+
+p {
+	margin-bottom: 0.5em;
+}
+
 @media (max-width: 600px) {
 	/* 633px grid (88x6 col, 21x5 gut; 88+21+88+21+88+21+88+21+88+21+88) */
 	.inner {
@@ -170,6 +187,7 @@ li#f-winter {
 	}
 	.mast,
 	.intro,
+	.toolbar,
 	.main,
 	.footer {
 		float: none;
@@ -192,8 +210,10 @@ li#f-winter {
 	}
 	.nav ul li {
 		float: left;
-		margin-right: 3.317535545023696682%;	/* 21px / 633px */
-		width: 31.121642969984202211%;		/* 197px / 633px */
+//		margin-right: 3.317535545023696682%;	/* 21px / 633px */
+//		width: 31.121642969984202211%;		/* 197px / 633px */
+		margin-right: 2%;
+		width: 23.5%;
 	}
 	.nav ul a,
 	.nav ul i {
@@ -217,6 +237,12 @@ li#f-winter {
 	.intro h2 {
 		font-size: 1.4em;
 	}
+	.toolbar {
+		margin-top: 0;
+	}
+	.toolbar h2 {
+		font-size: 1.4em;
+	}
 }
 @media (max-width: 400px) {
 	.figure,
@@ -227,6 +253,11 @@ li#f-winter {
 	li#f-watson,
 	li#f-moriarty {
 		margin-right: 0;
+	}
+	.nav ul li {
+		float: left;
+		margin-right: 2%;
+		width: 23.5%;
 	}
 }
 @media (min-width: 1300px) {
@@ -253,13 +284,18 @@ li#f-winter {
 	}
 	.nav ul li {
 		float: left;
-		margin-right: 3.317535545023696682%;			/* 21px / 633px */
-		width: 31.121642969984202211%;				/* 197px / 633px */
+//		margin-right: 3.317535545023696682%;			/* 21px / 633px */
+//		width: 31.121642969984202211%;				/* 197px / 633px */
+		margin-right: 2%;
+		width: 23.5%;
 	}
 	.nav ul li.last {
 		margin-right: 0;
 	}
 	.intro {
+		margin-top: 1em;
+	}
+	.toolbar {
 		margin-top: 1em;
 	}
 	.figure,
