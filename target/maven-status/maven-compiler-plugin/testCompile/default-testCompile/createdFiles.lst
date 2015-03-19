@@ -5,6 +5,7 @@ jp\co\ycode\webapp\context\Users.class
 jp\co\ycode\webapp\dictionary\Dictionary.class
 jp\co\ycode\webapp\browser\BrowserDriver$BrowserCleanup.class
 jp\co\ycode\webapp\context\TestContext.class
+jp\co\ycode\webapp\page\SignupPage.class
 jp\co\ycode\webapp\browser\BrowserFactory$1.class
 jp\co\ycode\webapp\util\FileUtils.class
 jp\co\ycode\webapp\browser\BrowserDriver$1.class
