@@ -81,11 +81,6 @@ This site has been developed basically in order to prove the skills of the devel
 				<td class="last-child">9.3.0</td>
 			</tr>
 			<tr>
-				<th colspan=2>IDE</th>
-				<td class="last-child">Eclipse Luna</td>
-				<td class="last-child">4.4.1</td>
-			</tr>
-			<tr>
 				<th colspan=2>Database</th>
 				<td class="last-child">Postgre SQL</td>
 				<td class="last-child">9.3.6</td>
@@ -126,6 +121,16 @@ This site has been developed basically in order to prove the skills of the devel
 				<td class="last-child">2.45.0</td>
 			</tr>
 		
+			<tr>
+				<th colspan=2>IDE</th>
+				<td class="last-child">Eclipse Luna</td>
+				<td class="last-child">4.4.1</td>
+			</tr>
+			<tr>
+				<th colspan=2>Build Tool</th>
+				<td class="last-child">Maven</td>
+				<td class="last-child">3.2.5</td>
+			</tr>
 		</table>
 	</p>
 
