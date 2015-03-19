@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
  
-	<context:component-scan base-package="jp.co.ycode.webapp" />
+	<context:component-scan base-package="jp.co.ycode.webapp.web" />
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<!-- The following 2 set-ups are required to use Tile 3 -->

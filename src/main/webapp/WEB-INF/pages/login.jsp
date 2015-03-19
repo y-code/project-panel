@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:url value="j_spring_security_check" var="loginUrl" />
+
 <html>
 <head>
 <title>Login Page</title>
@@ -36,7 +39,7 @@
 </head>
 <body onload='document.loginForm.username.focus();'>
 
-	<h1>Log in</h1>
+	<h2>Log in</h2>
 
 	<div id="login-box">
 
@@ -50,7 +53,7 @@
 		</c:if>
 
 		<form name='loginForm'
-		  action="<c:url value='j_spring_security_check' />" method='POST'>
+		  action="${loginUrl}" method='POST'>
 
 		  <table>
 			<tr>
@@ -72,6 +75,6 @@
 
 		</form>
 	</div>
-
+	
 </body>
 </html>
