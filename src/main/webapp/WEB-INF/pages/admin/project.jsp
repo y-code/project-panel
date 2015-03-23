@@ -77,12 +77,14 @@
 </head>
 <body>
 	<script type="text/javascript">
+		<c:if test="${!project.new}">
 		$(document).ready(function() {
 			var listPage = $.get("${listOfGoalsUrl}?id=${project.id}", function(data) {
 				$("#goals").html($(data).find("table#goals"));
 				$.globalEval($(data).find("script").html());
 			});
 		});
+		</c:if>
 	</script>
 	<form:form modelAttribute="project" action="${projectUrl}" method="post">
 	<table class="project">

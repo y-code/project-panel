@@ -57,6 +57,25 @@
 	<p>Regardless of your gender or age, it is never an easy task to achieve something great. Have you done something for it? Do you know what to do next? This web site can support you to achieve your wills!</p>
 	<p>The services here will let you focus on your aim even in your life full of temptations. Don't waste precious time in your life. You can sharpen up you and your life using this achievement system here.</p>
 	<p>But don't forget that your enthusiasm is the power source of this system.</p>
+	
+	<h2>Important Notes</h2>
+	<p>This website is still <span style="color:red">under construction</span>. We cannot assure the persistence of your data here. Please use services here only within a evaluation use at this moment. More functionalities are coming soon! We hope that we could announce its first system release before long.</p>
+	
+	<h2>News</h2>
+	<div class="news">
+		<h3>24 March, 2015</h3>
+		<ol>
+			<li>This 'News' section was added.</li>
+			<li>'Goals' section is added on Project Panel page.</li>
+		</ol>
+	</div>
+	<div class="news">
+		<h3>23 March, 2015</h3>
+		<ul>
+			<li><u>Goal Addition/Update function</u> was added on project update page.</li>
+		</ul>
+	</div>
+	
 	<h2>Active Projects</h2>
 	<div>The followings are the projects currently active on this site. Are there something interesting? Click on it and get on the project!</div>
 	<table class="projects">
