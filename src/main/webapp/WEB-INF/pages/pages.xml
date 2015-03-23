@@ -17,6 +17,18 @@
 	    <put-attribute name="body" value="/WEB-INF/pages/admin.jsp" />
 	</definition>
 	
+	<definition name="admin/project" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin/project.jsp" />
+	</definition>
+	
+	<definition name="admin/listofgoals" extends="single">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin/listofgoals.jsp" />
+	</definition>
+	
+	<definition name="admin/goal" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin/goal.jsp" />
+	</definition>
+	
 	<definition name="devroom" extends="default">
 	    <put-attribute name="body" value="/WEB-INF/pages/devroom.jsp" />
 	</definition>
@@ -28,10 +40,6 @@
 	<definition name="signedup" extends="default">
 	    <put-attribute name="body" value="/WEB-INF/pages/signedup.jsp" />
 	    <put-attribute name="body2" value="/WEB-INF/pages/login.jsp" />
-	</definition>
-	
-	<definition name="admin/project" extends="default">
-	    <put-attribute name="body" value="/WEB-INF/pages/admin/project.jsp" />
 	</definition>
 	
 	<definition name="projectpanel" extends="default">

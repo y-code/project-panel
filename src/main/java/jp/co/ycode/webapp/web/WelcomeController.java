@@ -1,9 +1,6 @@
 package jp.co.ycode.webapp.web;
 
-import java.security.Principal;
-
 import jp.co.ycode.webapp.domain.Project;
-import jp.co.ycode.webapp.domain.User;
 import jp.co.ycode.webapp.domain.service.ProjectMgmtService;
 import jp.co.ycode.webapp.domain.service.UserMgmtService;
 
@@ -23,9 +20,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class WelcomeController 
 {
     @Autowired
-    private ProjectMgmtService projectMgmtService;
-    @Autowired
     private UserMgmtService userMgmtService;
+    
+    @Autowired
+    private ProjectMgmtService projectMgmtService;
 	
 	@RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public ModelAndView processGetWelcome()
@@ -55,14 +53,6 @@ public class WelcomeController
 			project = new Project();
 		model.addAttribute("project", project);
 		return "projectpanel";
-	}
-	
-	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public String processGetAdmin(ModelMap model, Principal principal)
-	{
-		User user = userMgmtService.getUserByPrincipal(principal);
-		model.addAttribute("projects", projectMgmtService.getAllProjectsByUser(user));
-		return "admin";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)

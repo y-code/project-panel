@@ -15,6 +15,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.annotations.Type;
 
 @Entity
@@ -35,12 +37,22 @@ public class ProjectGoal implements Serializable {
 	@JoinColumn(name = "project_id", referencedColumnName = "project_id")
 	private Project project;
 	
-	@Column(name = "goal")
+	@Column(name = "goal", length = 1000)
 	@Type(type = "org.hibernate.type.TextType")
 	private String goal;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "goal")
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<ProjectStrategy> strategies;
+	
+	public ProjectGoal()
+	{
+	}
+	
+	public ProjectGoal(Project project)
+	{
+		this.project = project;
+	}
 	
 	public int getId() {
 		return id;
@@ -67,5 +79,10 @@ public class ProjectGoal implements Serializable {
 	}
 	public void setStrategies(List<ProjectStrategy> strategies) {
 		this.strategies = strategies;
+	}
+	
+	public boolean isNew()
+	{
+		return this.getId() == Const.ID_NOT_ISSUED;
 	}
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import jp.co.ycode.webapp.dao.ProjectDao;
 import jp.co.ycode.webapp.domain.Project;
+import jp.co.ycode.webapp.domain.ProjectGoal;
 import jp.co.ycode.webapp.domain.ProjectMember;
 import jp.co.ycode.webapp.domain.ProjectMemberRole;
 import jp.co.ycode.webapp.domain.User;
@@ -96,6 +97,24 @@ public class ProjectDaoImpl implements ProjectDao {
 				.setInteger("projectId", projectId)
 				.list();
 		return members;
+	}
+
+	@Override
+	public Project getProjectByGoalId(int id) {
+		Session session = this.sessionFactory.getCurrentSession();
+		ProjectGoal goal = (ProjectGoal) session
+				.createQuery("from ProjectGoal g where g.id = :goalId")
+				.setInteger("goalId", id)
+				.uniqueResult();
+		if (goal == null)
+			return null;
+		return goal.getProject();
+	}
+
+	@Override
+	public void saveGoal(ProjectGoal goal) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.merge(goal);
 	}
 
 }

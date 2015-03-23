@@ -4,6 +4,7 @@ import java.util.List;
 
 import jp.co.ycode.webapp.dao.ProjectDao;
 import jp.co.ycode.webapp.domain.Project;
+import jp.co.ycode.webapp.domain.ProjectGoal;
 import jp.co.ycode.webapp.domain.ProjectMember;
 import jp.co.ycode.webapp.domain.ProjectMemberRole;
 import jp.co.ycode.webapp.domain.User;
@@ -32,6 +33,11 @@ public class ProjectMgmtServiceImpl implements ProjectMgmtService {
 	}
 
 	@Override
+	public Project getProjectByGoalId(int goalId) {
+		return this.projectDao.getProjectByGoalId(goalId);
+	}
+
+	@Override
 	public void saveProject(Project project) {
 		this.projectDao.saveProject(project);
 	}
@@ -48,7 +54,7 @@ public class ProjectMgmtServiceImpl implements ProjectMgmtService {
 	}
 
 	@Override
-	public boolean isUserAllowedToAddNewProject(User user) {
+	public boolean isUserStillAbleToAddNewProject(User user) {
 		long count = this.projectDao.countOwingProjects(user);
 		if (user.isPremiumUser())
 			return count < MAX_NO_OF_PROJECTS_PREMIUM;
@@ -59,6 +65,23 @@ public class ProjectMgmtServiceImpl implements ProjectMgmtService {
 	@Override
 	public List<ProjectMember> getAllMembersByProjectId(int projectId) {
 		return this.projectDao.getAllMembersByProjectId(projectId);
+	}
+
+	@Override
+	public boolean isUserAllowedToEditPoject(User user, int projectId) {
+		Project project = this.getProjectById(projectId);
+		ProjectMember member = project.getMember(user.getId());
+		return member != null;
+	}
+
+	@Override
+	public void saveGoal(ProjectGoal goal) {
+		this.projectDao.saveGoal(goal);
+	}
+
+	@Override
+	public void addNewGoal(ProjectGoal goal) {
+		this.projectDao.saveGoal(goal);
 	}
 
 }

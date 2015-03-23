@@ -44,6 +44,7 @@ public class Project {
 	private String mission;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<ProjectGoal> goals;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
@@ -93,5 +94,21 @@ public class Project {
 		member.addRole(role);
 		this.getMembers().add(member);
 		return member;
+	}
+	
+	public ProjectMember getMember(int userId)
+	{
+		for (ProjectMember member : this.getMembers())
+			if (member.getUser().getId() == userId)
+				return member;
+		return null;
+	}
+	
+	public ProjectGoal getGoal(int goalId)
+	{
+		for (ProjectGoal goal : this.getGoals())
+			if (goal.getId() == goalId)
+				return goal;
+		return null;
 	}
 }

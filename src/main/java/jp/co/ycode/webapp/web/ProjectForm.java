@@ -48,7 +48,7 @@ public class ProjectForm {
 		//TODO: Need a check to validate the user should be the project owner or member.
 		
 		User user = this.userMgmtService.getUserByPrincipal(principal);
-		if (!this.projectMgmtService.isUserAllowedToAddNewProject(user))
+		if (!this.projectMgmtService.isUserStillAbleToAddNewProject(user))
 		{
 			if (user.isPremiumUser())
 			{
@@ -94,4 +94,5 @@ public class ProjectForm {
 		status.setComplete();
 		return "redirect:/admin";
 	}
+	
 }
