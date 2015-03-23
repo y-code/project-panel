@@ -38,6 +38,12 @@ public class ProjectDaoImpl implements ProjectDao {
 	}
 
 	@Override
+	public void addProject(Project project) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.persist(project);
+	}
+
+	@Override
 	public void saveProject(Project project) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.merge(project);

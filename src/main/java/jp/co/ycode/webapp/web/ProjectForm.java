@@ -84,7 +84,7 @@ public class ProjectForm {
 		User user = this.userMgmtService.getUserByPrincipal(principal);
 		this.projectMgmtService.addNewProject(project, user);
 		status.setComplete();
-		return "redirect:/admin";
+		return "redirect:/admin/project?id=" + project.getId();
 	}
 	
 	@RequestMapping(params = "update_project", method = RequestMethod.POST)

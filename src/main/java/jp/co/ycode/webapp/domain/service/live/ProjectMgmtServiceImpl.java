@@ -45,7 +45,7 @@ public class ProjectMgmtServiceImpl implements ProjectMgmtService {
 	@Override
 	public void addNewProject(Project project, User user) {
 		project.addPrjectMember(user, ProjectMemberRole.Role.OWNER);
-		this.projectDao.saveProject(project);
+		this.projectDao.addProject(project);
 	}
 
 	@Override

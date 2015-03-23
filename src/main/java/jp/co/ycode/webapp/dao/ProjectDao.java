@@ -10,6 +10,7 @@ import jp.co.ycode.webapp.domain.User;
 public interface ProjectDao {
 	public List<Project> getAllProjects();
 	public Project getProjectById(int id);
+	public void addProject(Project project);
 	public void saveProject(Project project);
 	public void deleteProject(Project project);
 	public List<Project> getAllProjectsByUser(User user);
