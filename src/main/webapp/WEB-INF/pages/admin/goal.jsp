@@ -42,7 +42,7 @@
 			<tr>
 				<th>Goal</th>
 				<td>
-					<form:input path="goal" size="32" maxlength="<%= aa.getColumnLength(ProjectGoal.class, \"goal\") %>" />
+					<form:textarea path="goal" rows="5" cols="50" maxlength="<%= aa.getColumnLength(ProjectGoal.class, \"goal\") %>" />
 					<form:errors path="goal" cssClass="errors"/>
 				</td>
 			</tr>
