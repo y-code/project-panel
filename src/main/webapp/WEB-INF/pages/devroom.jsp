@@ -86,8 +86,8 @@ This site has been developed basically in order to prove the skills of the devel
 				<td class="last-child">9.3.6</td>
 			</tr>
 			<tr>
-				<th rowspan=10 width=100>Frameworks</th>
-				<th rowspan=7 width=100>Application</th>
+				<th rowspan=11 width=100>Frameworks</th>
+				<th rowspan=8 width=100>Application</th>
 				<td>Spring MVC</td>
 				<td>4.1.5</td>
 			</tr>
@@ -110,6 +110,10 @@ This site has been developed basically in order to prove the skills of the devel
 			<tr>
 				<td>jQuery</td>
 				<td>2.1.3</td>
+			</tr>
+			<tr>
+				<td>jQuery UI</td>
+				<td>1.11.3</td>
 			</tr>
 			<tr>
 				<td class="last-child">CSS3</td>
