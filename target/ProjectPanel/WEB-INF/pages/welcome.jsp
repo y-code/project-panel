@@ -63,10 +63,16 @@
 	
 	<h2>News</h2>
 	<div class="news">
+		<h3>25 March, 2015</h3>
+		<ul>
+			<li><u>Goal Addition/Update page</u> was changed to be opened in a jQuery UI dialog.</li>
+		</ul>
+	</div>
+	<div class="news">
 		<h3>24 March, 2015</h3>
 		<ol>
-			<li>This 'News' section was added.</li>
-			<li>'Goals' section is added on Project Panel page.</li>
+			<li>This <u>'News' section</u> was added.</li>
+			<li><u>'Goals' section</u> was added on Project Panel page.</li>
 		</ol>
 	</div>
 	<div class="news">
