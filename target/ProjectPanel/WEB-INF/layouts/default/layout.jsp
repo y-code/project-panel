@@ -4,15 +4,19 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
-<spring:url value="/resources/css/layout-default.css" var="layoutCssUrl" htmlEscape="true" />
-<spring:url value="/resources/js/jquery-2.1.3.min.js" var="jqueryUrl" htmlEscape="true" />
+<spring:url var="layoutCssUrl" value="/resources/css/layout-default.css" />
+<spring:url var="jqueryUrl" value="/resources/js/jquery-2.1.3.min.js" />
+<spring:url var="jqueryUiCssUrl" value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+<spring:url var="jqueryUiJsUrl" value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" />
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Project Panel</title>
 	<link type="text/css" rel="stylesheet" href="${layoutCssUrl}" media="screen, projection" />
-	<script src="${jqueryUrl}"></script>
+	<link type="text/css" rel="stylesheet" href="${jqueryUiCssUrl}" media="screen, projection" />
+	<script type="text/javascript" src="${jqueryUrl}"></script>
+	<script type="text/javascript" src="${jqueryUiJsUrl}"></script>
 </head>
 <body>
 	<div id="page">

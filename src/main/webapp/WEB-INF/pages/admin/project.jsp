@@ -38,30 +38,34 @@
 			border-bottom: 0px;
 		}
 		
-		table#goals {
+		#goals {
 			width: 90%;
 			border-top: 1px solid #e5eff8;
 			border-right: 1px solid #e5eff8;
 			margin: 1em auto;
 			border-collapse: collapse;
 		}
-		table#goals td {
+		#goals table {
+			width: 100%;
+		}
+		#goals td {
+			width: 100%;
 			color: #678197;
 			border-left: 1px solid #e5eff8;
 			padding: .3em 1em;
 			text-align: left;
 		}
-		table#goals tr {
+		#goals tr {
 			cursor: pointer;
 			border-bottom: 1px solid #888583;
 			background: #f9fcfe;
 		}
-		table#goals tr td.control {
+		#goals tr td.control {
 			cursor: default;
 			background: transparent;
 			text-align: right;
 		}
-		table#goals th {
+		#goals th {
 			background: #ffffff;
 			border-bottom: 1px solid #e5eff8;
 			border-left: 1px solid #e5eff8;
@@ -71,17 +75,14 @@
 	</style>
 	<script type="text/javascript" src="${jqueryUrl}"></script>
 	<script type="text/javascript" src="${jqueryUiJsUrl}"></script>
-	<script type="text/javascript">
-		
-	</script>
 </head>
 <body>
 	<script type="text/javascript">
 		<c:if test="${!project.new}">
 		$(document).ready(function() {
-			var listPage = $.get("${listOfGoalsUrl}?id=${project.id}", function(data) {
-				$("#goals").html($(data).find("table#goals"));
-				$.globalEval($(data).find("script").html());
+			$.get("${listOfGoalsUrl}?id=${project.id}", function(data) {
+				$("#goals").html($(data).find("#goals").html());
+				$.globalEval($(data).find("script").text());
 			});
 		});
 		</c:if>

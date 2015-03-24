@@ -36,31 +36,33 @@
 </style>
 </head>
 <body>
-	<form:form modelAttribute="goal" action="${goalUrl}" method="post">
-	<table id="goal">
-		<tr>
-			<th>Goal</th>
-			<td>
-				<form:input path="goal" size="32" maxlength="<%= aa.getColumnLength(ProjectGoal.class, \"goal\") %>" />
-				<form:errors path="goal" cssClass="errors"/>
-			</td>
-		</tr>
-		<tr>
-			<td class="control" colspan=2>
-				<c:choose>
-					<c:when test="${goal.new}">
-						<input name="add_goal" type="submit" value="Add Goal" onclick="return confirm('Are you sure you want to add the new goal?')"/>
-					</c:when>
-					<c:otherwise>
-						<input name="update_goal" type="submit" value="Update" onclick="return confirm('Are you sure you want to save the change?')"/>
-					</c:otherwise>
-				</c:choose>
-			</td>
-		</tr>
-	</table>
-	</form:form>
-	
-	<div id="strategies">
+	<div id="goal">
+		<form:form modelAttribute="goal" action="${goalUrl}" method="post">
+		<table>
+			<tr>
+				<th>Goal</th>
+				<td>
+					<form:input path="goal" size="32" maxlength="<%= aa.getColumnLength(ProjectGoal.class, \"goal\") %>" />
+					<form:errors path="goal" cssClass="errors"/>
+				</td>
+			</tr>
+			<tr>
+				<td class="control" colspan=2>
+					<c:choose>
+						<c:when test="${goal.new}">
+							<input name="add_goal" type="submit" value="Add Goal" onclick="return confirm('Are you sure you want to add the new goal?')"/>
+						</c:when>
+						<c:otherwise>
+							<input name="update_goal" type="submit" value="Update" onclick="return confirm('Are you sure you want to save the change?')"/>
+						</c:otherwise>
+					</c:choose>
+				</td>
+			</tr>
+		</table>
+		</form:form>
 	</div>
+	
+	<div id="strategies"></div>
+	
 </body>
 </html>

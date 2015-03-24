@@ -1,5 +1,4 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page session="true"%>
 
 <c:url var="logoutUrl" value="/j_spring_security_logout" />
 <c:url var="projectUrl" value="/admin/project" />

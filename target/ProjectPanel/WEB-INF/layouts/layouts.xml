@@ -14,4 +14,9 @@
 		<put-attribute name="footer" value="/WEB-INF/layouts/default/footer.jsp" />
 	</definition>
 	
+    <definition name="single" 
+      template="/WEB-INF/layouts/single/layout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+	
 </tiles-definitions>

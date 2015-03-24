@@ -8,43 +8,56 @@
 <html>
 <head>
 <style>
-	table.project {
-		width: 100%;
+	th, td {
+		padding: 15px 10px;
+	}
+	
+	#project table {
+		width: 90%;
+		margin: 0px auto;
 		border-top: 1px solid #888583;
 		text-align: left;
 		display: float;
 	}
-	table.project th, td {
-		padding: 15px 10px;
-	}
-	table.project tr {
+	#project table tr {
 		border-bottom: 1px solid #888583;
 	}
-	table.project th {
+	#project table th {
 		background-color: #ffffff;
 		width:100px;
 	}
-	table.members {
-		width: 100%;
+	
+	#goals table {
+		width: 90%;
+		margin: 0px auto;
+		border-top: 1px solid #888583;
+	}
+	#goals table tr {
+		border-bottom: 1px solid #888583;
+	}
+	#goals table th {
+		background-color: #ffffff;
+	}
+	
+	#members table {
+		width: 90%;
+		margin: 0px auto;
 		border-top: 1px solid #888583;
 		text-align: left;
 		display: float;
 	}
-	table.members th, td {
-		padding: 15px 10px;
-	}
-	table.members tr {
+	#members table tr {
 		border-bottom: 1px solid #888583;
 	}
-	table.members th {
+	#members table th {
 		background-color: #ffffff;
 	}
 </style>
 </head>
 <body>
-	<h2>${project.name}</h2>
-	<p>
-		<table class="project">
+	<div id="project">
+		<h2>${project.name}</h2>
+		<table>
 			<tr>
 				<th>Vision</th>
 				<td>
@@ -58,10 +71,20 @@
 				</td>
 			</tr>
 		</table>
-	</p>
-	<h2>Project Members</h2>
-	<p>
-		<table class="members">
+	</div>
+	<div id="goals">
+		<h2>Goals</h2>
+		<table>
+			<c:forEach items="${project.goals}" var="goal">
+				<tr>
+					<td>${goal.goal}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</div>
+	<div id="members">
+		<h2>Project Members</h2>
+		<table>
 			<tr><th>Member Name</th><th>Member Type</th></tr>
 			<c:forEach items="${project.members}" var="member">
 				<tr>
@@ -75,6 +98,6 @@
 				</tr>
 			</c:forEach>
 		</table>
-	</p>
+	</div>
 </body>
 </html>
