@@ -128,7 +128,7 @@
 		</p>
 	
 		<h2>Software Development Environment</h2>
-		<div>
+		<p>
 			<table class="properties">
 				<tr>
 					<th colspan=2>Computer Language</th>
