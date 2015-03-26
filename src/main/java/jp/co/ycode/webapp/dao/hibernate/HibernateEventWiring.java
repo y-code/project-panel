@@ -1,4 +1,4 @@
-package jp.co.ycode.webapp.dao;
+package jp.co.ycode.webapp.dao.hibernate;
 
 import javax.annotation.PostConstruct;
 

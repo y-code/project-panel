@@ -19,4 +19,5 @@ public interface ProjectDao {
 	public List<ProjectMember> getAllMembersByProjectId(int projectId);
 	public Project getProjectByGoalId(int id);
 	public void saveGoal(ProjectGoal goal);
+	public void saveMember(ProjectMember member);
 }

@@ -38,6 +38,46 @@ public class AdminController {
 			String strProjectId)
 	{
 		User user = userMgmtService.getUserByPrincipal(principal);
+		
+		Project project = null;
+		try
+		{
+			project = this.getProject(user, strProjectId);
+		}
+		catch (Exception e)
+		{
+			model.addAttribute("message", e.getMessage());
+			return "error";
+		}
+		
+		model.addAttribute("project", project);
+		return "admin/listofgoals";
+	}
+	
+	@RequestMapping(value = "/admin/listofmembers", method = RequestMethod.GET)
+	public String processGetListOfMembers(ModelMap model, Principal principal,
+			@RequestParam(value = "id", required = true)
+			String strProjectId)
+	{
+		User user = userMgmtService.getUserByPrincipal(principal);
+		
+		Project project = null;
+		try
+		{
+			project = this.getProject(user, strProjectId);
+		}
+		catch (Exception e)
+		{
+			model.addAttribute("message", e.getMessage());
+			return "error";
+		}
+		
+		model.addAttribute("project", project);
+		return "admin/listofmembers";
+	}
+	
+	private Project getProject(User user, String strProjectId) throws Exception
+	{
 		Project project = null;
 		try
 		{
@@ -45,24 +85,21 @@ public class AdminController {
 		}
 		catch (NumberFormatException e)
 		{
-			model.addAttribute("message", "You have requested a page with an invalid URL. If you are so sure that the URL you used is right, please send the URL to us. We will look after it.");
-			return "error";
+			throw new Exception("You have requested a page with an invalid URL. If you are so sure that the URL you used is right, please send the URL to us. We will look after it.");
 		}
 		
 		if (project == null)
 		{
-			model.addAttribute("message", "You have requested a list of the goals for invalid project. If you are so sure that the URL you used is right, please send the URL to us. We will look after it.");
-			return "error";
+			throw new Exception("You have requested a list of the members for invalid project. If you are so sure that the URL you used is right, please send the URL to us. We will look after it.");
 		}
 		
 		ProjectMember member = project.getMember(user.getId());
 		if (member == null)
 		{
-			model.addAttribute("message", "You cannot access this page because you are not a member of the project \"" + project.getName() + "\".");
+			throw new Exception("You cannot access this page because you are not a member of the project \"" + project.getName() + "\".");
 		}
 		
-		model.addAttribute("project", project);
-		return "admin/listofgoals";
+		return project;
 	}
 	
 }

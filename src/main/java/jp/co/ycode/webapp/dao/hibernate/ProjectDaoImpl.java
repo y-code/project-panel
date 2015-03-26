@@ -123,4 +123,10 @@ public class ProjectDaoImpl implements ProjectDao {
 		session.merge(goal);
 	}
 
+	@Override
+	public void saveMember(ProjectMember member) {
+		Session session = this.sessionFactory.getCurrentSession();
+		session.merge(member);
+	}
+
 }

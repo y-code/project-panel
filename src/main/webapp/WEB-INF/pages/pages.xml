@@ -29,6 +29,14 @@
 	    <put-attribute name="body" value="/WEB-INF/pages/admin/goal.jsp" />
 	</definition>
 	
+	<definition name="admin/listofgoals" extends="single">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin/listofmembers.jsp" />
+	</definition>
+	
+	<definition name="admin/goal" extends="default">
+	    <put-attribute name="body" value="/WEB-INF/pages/admin/member.jsp" />
+	</definition>
+	
 	<definition name="devroom" extends="default">
 	    <put-attribute name="body" value="/WEB-INF/pages/devroom.jsp" />
 	</definition>
