@@ -48,22 +48,25 @@ public class ProjectForm {
 		//TODO: Need a check to validate the user should be the project owner or member.
 		
 		User user = this.userMgmtService.getUserByPrincipal(principal);
-		if (!this.projectMgmtService.isUserStillAbleToAddNewProject(user))
-		{
-			if (user.isPremiumUser())
-			{
-				model.addAttribute("message", "Thank you for using our services. Unfortunately, you have already made your projects upto the max number. If you would like to get a special offer, please contact us.");
-				return "error";
-			}
-			else
-			{
-				model.addAttribute("message", "You have made your projects upto the number that is allowed for a general user. Please consider to upgrade your user account to the premium user account.");
-				return "premiumsignup";
-			}
-		}
 		
 		Project project = null;
-		if (strProjectId != null)
+		if (strProjectId == null)
+		{
+			if (!this.projectMgmtService.isUserStillAbleToAddNewProject(user))
+			{
+				if (user.isPremiumUser())
+				{
+					model.addAttribute("message", "Thank you for using our services. Unfortunately, you have already made your projects upto the max number. If you would like to get a special offer, please contact us.");
+					return "error";
+				}
+				else
+				{
+					model.addAttribute("message", "You have made your projects upto the number that is allowed for a general user. Please consider to upgrade your user account to the premium user account.");
+					return "premiumsignup";
+				}
+			}
+		}
+		else
 		{
 			try {
 				int projectId = Integer.parseInt(strProjectId);

@@ -55,49 +55,51 @@
 </style>
 </head>
 <body>
-	<div id="project">
-		<h2>${project.name}</h2>
-		<table>
-			<tr>
-				<th>Vision</th>
-				<td>
-					${project.vision}
-				</td>
-			</tr>
-			<tr>
-				<th>Mission</th>
-				<td>
-					${project.mission}
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div id="goals">
-		<h2>Goals</h2>
-		<table>
-			<c:forEach items="${project.goals}" var="goal">
+	<div id="projectpanel">
+		<div id="project">
+			<h2>${project.name}</h2>
+			<table>
 				<tr>
-					<td>${goal.goal}</td>
-				</tr>
-			</c:forEach>
-		</table>
-	</div>
-	<div id="members">
-		<h2>Project Members</h2>
-		<table>
-			<tr><th>Member Name</th><th>Member Type</th></tr>
-			<c:forEach items="${project.members}" var="member">
-				<tr>
-					<td>${member.user.name}</td>
+					<th>Vision</th>
 					<td>
-						<c:choose>
-							<c:when test="${member.projectOwner}">OWNER</c:when>
-							<c:otherwise>GENERAL</c:otherwise>
-						</c:choose>
+						${project.vision}
 					</td>
 				</tr>
-			</c:forEach>
-		</table>
+				<tr>
+					<th>Mission</th>
+					<td>
+						${project.mission}
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="goals">
+			<h2>Goals</h2>
+			<table>
+				<c:forEach items="${project.goals}" var="goal">
+					<tr>
+						<td>${goal.goal}</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
+		<div id="members">
+			<h2>Project Members</h2>
+			<table>
+				<tr><th>Member Name</th><th>Member Type</th></tr>
+				<c:forEach items="${project.members}" var="member">
+					<tr>
+						<td>${member.user.name}</td>
+						<td>
+							<c:choose>
+								<c:when test="${member.projectOwner}">OWNER</c:when>
+								<c:otherwise>GENERAL</c:otherwise>
+							</c:choose>
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</div>
 	</div>
 </body>
 </html>

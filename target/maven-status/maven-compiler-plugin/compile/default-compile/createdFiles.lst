@@ -15,7 +15,6 @@ jp\co\ycode\webapp\domain\ProjectStrategy.class
 jp\co\ycode\webapp\WelcomeController.class
 jp\co\ycode\webapp\domain\Project.class
 jp\co\ycode\webapp\domain\UserRole$Role.class
-jp\co\ycode\webapp\dao\HibernateEventWiring.class
 jp\co\ycode\webapp\web\ProjectForm.class
 jp\co\ycode\webapp\util\AnnotationAccessUtilBean.class
 jp\co\ycode\webapp\domain\ProjectMember.class
