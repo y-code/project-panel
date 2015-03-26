@@ -2,8 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<spring:url value="/signup" var="signupUrl" htmlEscape="true" />
-<spring:url value="/projectpanel" var="projectPanelUrl" htmlEscape="true" />
+<spring:url var="signupUrl" value="/signup" htmlEscape="true" />
+<spring:url var="devroomUrl" value="/devroom" htmlEscape="true" />
+<spring:url var="projectPanelUrl" value="/projectpanel" htmlEscape="true" />
 
 <html>
 <head>
@@ -62,6 +63,12 @@
 	<p>This website is still <span style="color:red">under construction</span>. We cannot assure the persistence of your data here. Please use services here only within a evaluation use at this moment. More functionalities are coming soon! We hope that we could announce its first system release before long.</p>
 	
 	<h2>News</h2>
+	<div class="news">
+		<h3>26 March, 2015</h3>
+		<ul>
+			<li><u>'Project Planning' section</u> was added in <a href="${devroomUrl}">Developers' Room</a>.</li>
+		</ul>
+	</div>
 	<div class="news">
 		<h3>25 March, 2015</h3>
 		<ul>
