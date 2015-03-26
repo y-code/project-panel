@@ -263,7 +263,8 @@
 		</ol>
 		<h3>Presentation</h3>
 		<ol>
-			<li>As a project manager, I want to have a page to promote the project in order to collect supports.</li>
+			<li>As a project owner, I want to have a page to promote the project in order to collect supports.</li>
+			<li>As a project owner, I want to choose a presentation template for the promotion page.</li>
 			<li>As a project manager, I want to have a page to report the project progress to encourage the project members.</li>
 		</ol>
 		<h3>Task Management</h3>
@@ -277,6 +278,23 @@
 			<li>As a project member, I want to refer the state of each project member.</li>
 			<li>As a project member, I want to leave messages for a sprint backlog items, which are shared among the project members.</li>
 			<li>As a project manager, I want to discuss about a finalized sprint among the project members.</li>
+		</ol>
+		<h3>Business Concern</h3>
+		<ol>
+			<li>As a user, I want to be able to upgrade my account in this website by paying quarterly charge for the services. After the upgrade, a user will be a premium user.</li>
+			<li>As a premium user, I want to pay the charge on the website online.</li>
+			<li>As a user, the number of project I can make is limited to 2.</li>
+			<li>As a user, the number of project member in a project is limited to 3.</li>
+			<li>As a user, the number of product backlog item in a project is limited to 20.</li>
+			<li>As a user, the number of discussion in a project is limited to 3.</li>
+			<li>As a user, I can have any users as project member in owning projects.</li>
+			<li>As a user, I cannot choose a presentation template for an owning project.</li>
+			<li>As a premium user, the number of project I can make is limited to 10.</li>
+			<li>As a premium user, the number of project member in a project is not limited.</li>
+			<li>As a premium user, the number of product backlog item in a project is not limited.</li>
+			<li>As a premium user, the number of discussion in a project is not limited.</li>
+			<li>As a premium user, I can only have premium users as project member in owning projects.</li>
+			<li>As a premium user, I can choose a presentation template for an owning project from a variety of selections.</li>
 		</ol>
 	</div>
 	
