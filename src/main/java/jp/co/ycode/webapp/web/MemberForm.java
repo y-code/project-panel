@@ -113,7 +113,7 @@ public class MemberForm {
 		return "admin/goal";
 	}
 	
-	@RequestMapping(params = "add_goal", method = RequestMethod.POST)
+	@RequestMapping(params = "add_member", method = RequestMethod.POST)
 	public String processPostAddGoal(SessionStatus status, Principal principal, ModelMap model,
 			@ModelAttribute("goal")
 			ProjectGoal goal,
@@ -137,7 +137,7 @@ public class MemberForm {
 		return "redirect:/admin/project?id=" + goal.getProject().getId();
 	}
 	
-	@RequestMapping(params = "update_goal", method = RequestMethod.POST)
+	@RequestMapping(params = "update_member", method = RequestMethod.POST)
 	public String processPostUpadteGaol(SessionStatus status, Principal principal, ModelMap model,
 			@ModelAttribute("goal")
 			ProjectGoal goal,
