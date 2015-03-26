@@ -42,6 +42,11 @@
 		padding: .3em 1em;
 		text-align: left;
 	}
+	
+	.news {
+		width: 80%;
+		margin: 0 auto;
+	}
 </style>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -67,7 +72,7 @@
 		<h3>26 March, 2015</h3>
 		<ul>
 			<li><u>'Project Planning' section</u> was added in <a href="${devroomUrl}#project-planning">Developers' Room</a>.</li>
-			<li><u>'User Stories' section</u> was added in <a href="${devroomUrl}#user-stories">Developers' Room</a>.</li>
+			<li><u>'Requirements Analysis' section</u> was added in <a href="${devroomUrl}#req-analysis">Developers' Room</a>.</li>
 		</ul>
 	</div>
 	<div class="news">
@@ -78,10 +83,10 @@
 	</div>
 	<div class="news">
 		<h3>24 March, 2015</h3>
-		<ol>
+		<ul>
 			<li>This <u>'News' section</u> was added.</li>
 			<li><u>'Goals' section</u> was added on Project Panel page.</li>
-		</ol>
+		</ul>
 	</div>
 	<div class="news">
 		<h3>23 March, 2015</h3>
@@ -91,7 +96,10 @@
 	</div>
 	
 	<h2>Active Projects</h2>
-	<div>The followings are the projects currently active on this site. Are there something interesting? Click on it and get on the project!</div>
+	<p>
+		The followings are the projects currently active on this site. Are there something interesting?
+		Click on it and get on the project!
+	</p>
 	<table class="projects">
 		<caption>Projects</caption>
 		<c:forEach items="${projects}" var="project">

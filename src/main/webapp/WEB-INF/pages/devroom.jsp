@@ -42,12 +42,6 @@
 			text-align: left;
 		}
 		
-		h3 {
-		  font-size: 1.2em;
-		  text-transform: lowercase;
-		  text-align: center;
-		  margin: 0.75em 0 1em;
-		}
 	</style>
 	<style>
 		th, td {
@@ -99,6 +93,7 @@
 	<script type="text/javascript" src="${jqueryUiJsUrl}"></script>
 </head>
 <body>
+	
 	<script type="text/javascript">
 	//<![CDATA[
 	$(document).ready(function() {
@@ -112,158 +107,178 @@
 	});
 	//]]>
 	</script>
-	<h2>What is Developers' Room</h2>
+	
+	<p>
+	This website has been developed basically in order to prove the skills of the software engineers who have developed this web site.
+	This section will detail the development of this web application.
+	</p>
+	
+	<h2>Contents</h2>
 	<div>
-	This site has been developed basically in order to prove the skills of the developers who have developed this web site. This section will describe how this web site was developed.
+		<ul style="text-align: center; list-style: none;">
+			<li><a href="#developers">Developers</a></li>
+			<li><a href="#dev-environment">Software Development Environment</a></li>
+			<li><a href="#src-code">Source Code</a></li>
+			<li><a href="#project-planning">Project Planning</a></li>
+			<li><a href="#req-analysis">Requirements Analysis</a></li>
+			<li><a href="#"></a></li>
+		</ul>
 	</div>
 	
-		<h2>Developers</h2>
-		<p>
-			<table class="properties">
-				<tr>
-					<td class="last-child">Yasunori Ikeda</td>
-					<td class="last-child"><a href="http://nz.linkedin.com/in/yasuikeda/en">Linked in</a></td>
-				</tr>
-			</table>
-		</p>
-	
-		<h2>Software Development Environment</h2>
-		<p>
-			<table class="properties">
-				<tr>
-					<th colspan=2>Computer Language</th>
-					<td class="last-child">Java</td>
-					<td class="last-child">8</td>
-				</tr>
-				<tr>
-					<th colspan=2>Server Environment</th>
-					<td class="last-child">Heroku</td>
-					<td class="last-child"></td>
-				</tr>
-				<tr>
-					<th colspan=2>Application Server</th>
-					<td class="last-child">Jetty</td>
-					<td class="last-child">9.3.0</td>
-				</tr>
-				<tr>
-					<th colspan=2>Database</th>
-					<td class="last-child">Postgre SQL</td>
-					<td class="last-child">9.3.6</td>
-				</tr>
-				<tr>
-					<th rowspan=11 width=100>Frameworks</th>
-					<th rowspan=8 width=100>Application</th>
-					<td>Spring MVC</td>
-					<td>4.1.5</td>
-				</tr>
-				<tr>
-					<td>Apache Tiles</td>
-					<td>3.0.5</td>
-				</tr>
-				<tr>
-					<td>Spring Securit</td>
-					<td>3.2.6</td>
-				</tr>
-				<tr>
-					<td>Spring ORM</td>
-					<td>4.1.5</td>
-				</tr>
-				<tr>
-					<td>Hibernate</td>
-					<td>4.3.8</td>
-				</tr>
-				<tr>
-					<td>jQuery</td>
-					<td>2.1.3</td>
-				</tr>
-				<tr>
-					<td>jQuery UI</td>
-					<td>1.11.3</td>
-				</tr>
-				<tr>
-					<td class="last-child">CSS3</td>
-					<td class="last-child"> </td>
-				</tr>
-				<tr>
-					<th rowspan=3>Testing</th>
-					<td>JUnit</td>
-					<td>4.1.5</td>
-				</tr>
-				<tr>
-					<td>Cucumber</td>
-					<td>1.2.2</td>
-				</tr>
-				<tr>
-					<td class="last-child">Selenium</td>
-					<td class="last-child">2.45.0</td>
-				</tr>
-			
-				<tr>
-					<th colspan=2>IDE</th>
-					<td class="last-child">Eclipse Luna</td>
-					<td class="last-child">4.4.1</td>
-				</tr>
-				<tr>
-					<th colspan=2>Build Tool</th>
-					<td class="last-child">Maven</td>
-					<td class="last-child">3.2.5</td>
-				</tr>
-			</table>
-		</p>
-	
-		<h2>Source Code</h2>
-		<p>
-			The source code of this web application is open at GitHub. Please visit <a href="https://github.com/y-code/project-panel">this repository</a>.
-		</p>
-		<p style="text-align: center">
-			<a href="https://github.com/y-code/project-panel"><img src="${gitHubImgUrl}"/></a>
-		</p>
+	<h2>Developers</h2>
+	<p>
+		<table class="properties">
+			<tr>
+				<td class="last-child">Yasunori Ikeda</td>
+				<td class="last-child"><a href="http://nz.linkedin.com/in/yasuikeda/en">Linked in</a></td>
+			</tr>
+		</table>
+	</p>
+
+	<a id="dev-environment"></a>
+	<h2>Software Development Environment</h2>
+	<p>
+		<table class="properties">
+			<tr>
+				<th colspan=2>Computer Language</th>
+				<td class="last-child">Java</td>
+				<td class="last-child">8</td>
+			</tr>
+			<tr>
+				<th colspan=2>Server Environment</th>
+				<td class="last-child">Heroku</td>
+				<td class="last-child"></td>
+			</tr>
+			<tr>
+				<th colspan=2>Application Server</th>
+				<td class="last-child">Jetty</td>
+				<td class="last-child">9.3.0</td>
+			</tr>
+			<tr>
+				<th colspan=2>Database</th>
+				<td class="last-child">Postgre SQL</td>
+				<td class="last-child">9.3.6</td>
+			</tr>
+			<tr>
+				<th rowspan=11 width=100>Frameworks</th>
+				<th rowspan=8 width=100>Application</th>
+				<td>Spring MVC</td>
+				<td>4.1.5</td>
+			</tr>
+			<tr>
+				<td>Apache Tiles</td>
+				<td>3.0.5</td>
+			</tr>
+			<tr>
+				<td>Spring Securit</td>
+				<td>3.2.6</td>
+			</tr>
+			<tr>
+				<td>Spring ORM</td>
+				<td>4.1.5</td>
+			</tr>
+			<tr>
+				<td>Hibernate</td>
+				<td>4.3.8</td>
+			</tr>
+			<tr>
+				<td>jQuery</td>
+				<td>2.1.3</td>
+			</tr>
+			<tr>
+				<td>jQuery UI</td>
+				<td>1.11.3</td>
+			</tr>
+			<tr>
+				<td class="last-child">CSS3</td>
+				<td class="last-child"> </td>
+			</tr>
+			<tr>
+				<th rowspan=3>Testing</th>
+				<td>JUnit</td>
+				<td>4.1.5</td>
+			</tr>
+			<tr>
+				<td>Cucumber</td>
+				<td>1.2.2</td>
+			</tr>
+			<tr>
+				<td class="last-child">Selenium</td>
+				<td class="last-child">2.45.0</td>
+			</tr>
 		
-		<a id="project-planning"></a>
-		<h2>Project Planning</h2>
-		<div id="planning"></div>
-		
-		<a id="user-stories"></a>
-		<h2>User Stories</h2>
-		<div id="user-stories">
-			<h3>Project Planning</h3>
-			<ol>
-				<li>As a user, I want to tart a project. After this, the user will be a project owner as well as being a project member.</li>
-				<li>As a project owner, I want to finalize a project.</li>
-				<li>As a project owner, I want to clarify the purpose of the project, which means view and mission of the project.</li>
-				<li>As a project owner, I want to set up the goals for it.</li>
-				<li>As a project owner, I want to consider strategies for each goal.</li>
-				<li>As a project owner, I want to identify action plans for each strategy.</li>
-			</ol>
-			<h3>Team Management</h3>
-			<ol>
-				<li>As a project owner, I want to invite someone to my project in order to organize a project team. If the invited person accept it, he will be a project member.</li>
-				<li>As a project member, I want to recommend the project manager to invite someone to our project.</li>
-				<li>As a project owner, I want to assign a project member to a project manager.</li>
-				<li>As a user interested in a project, I want to ask the project owner to participate in it. If the project owner accept the request, he will be a project member of the project.</li>
-				<li>As a project owner, I want to make a discussion online among project members.</li>
-				<li>As a project owner, I want to notify about a new discussion to each project member.</li>
-				<li>As a project member, I want to raise a draft discussion topic, which will be discussed once the project owner adopt it.</li>
-				<li>As a project owner, I want to adopt or reject a draft discussion topic raised from the project members.</li>
-				<li>As a user, I want to have a page to promote myself.</li>
-			</ol>
-			<h3>Presentation</h3>
-			<ol>
-				<li>As a project manager, I want to have a page to promote the project in order to collect supports.</li>
-				<li>As a project manager, I want to have a page to report the project progress to encourage the project members.</li>
-			</ol>
-			<h3>Task Management</h3>
-			<ol>
-				<li>As a project manager, I want to create a product backlog item.</li>
-				<li>As a project manager, I want to prioritize the items in the project backlog.</li>
-				<li>As a project manager, I want to define project backlog items for a sprint. They will be sprint backlog items.</li>
-				<li>As a project manager, I want to discuss about the items included in a sprint before the sprint starts.</li>
-				<li>As a project manager, I want to start a sprint.</li>
-				<li>As a project manager, I want to finalize a sprint.</li>
-				<li>As a project member, I want to refer the state of each project member.</li>
-				<li>As a project member, I want to leave messages for a sprint backlog items, which are shared among the project members.</li>
-				<li>As a project manager, I want to discuss about a finalized sprint among the project members.</li>
-			</ol>
-		</div>
+			<tr>
+				<th colspan=2>IDE</th>
+				<td class="last-child">Eclipse Luna</td>
+				<td class="last-child">4.4.1</td>
+			</tr>
+			<tr>
+				<th colspan=2>Build Tool</th>
+				<td class="last-child">Maven</td>
+				<td class="last-child">3.2.5</td>
+			</tr>
+		</table>
+	</p>
+
+	<a id="src-code"></a>
+	<h2>Source Code</h2>
+	<p>
+		The source code of this web application is open at GitHub. Please visit <a href="https://github.com/y-code/project-panel">this repository</a>.
+	</p>
+	<p style="text-align: center">
+		<a href="https://github.com/y-code/project-panel"><img src="${gitHubImgUrl}"/></a>
+	</p>
+	
+	<a id="project-planning"></a>
+	<h2>Project Planning</h2>
+	<div id="planning"></div>
+	
+	<a id="req-analysis"></a>
+	<h2>Requirements Analysis</h2>
+	<p>
+		As a first step of the requirements analysis, I used <i>User Story</i>, which is one of Agile practices.
+		The following user stories are categorized according to the goals in Project Planning above. 
+	</p>
+	<div id="user-stories">
+		<h3>Project Planning</h3>
+		<ol>
+			<li>As a user, I want to tart a project. After this, the user will be a project owner as well as being a project member.</li>
+			<li>As a project owner, I want to finalize a project.</li>
+			<li>As a project owner, I want to clarify the purpose of the project, which means view and mission of the project.</li>
+			<li>As a project owner, I want to set up the goals for it.</li>
+			<li>As a project owner, I want to consider strategies for each goal.</li>
+			<li>As a project owner, I want to identify action plans for each strategy.</li>
+		</ol>
+		<h3>Team Management</h3>
+		<ol>
+			<li>As a project owner, I want to invite someone to my project in order to organize a project team. If the invited person accept it, he will be a project member.</li>
+			<li>As a project member, I want to recommend the project manager to invite someone to our project.</li>
+			<li>As a project owner, I want to assign a project member to a project manager.</li>
+			<li>As a user interested in a project, I want to ask the project owner to participate in it. If the project owner accept the request, he will be a project member of the project.</li>
+			<li>As a project owner, I want to make a discussion online among project members.</li>
+			<li>As a project owner, I want to notify about a new discussion to each project member.</li>
+			<li>As a project member, I want to raise a draft discussion topic, which will be discussed once the project owner adopt it.</li>
+			<li>As a project owner, I want to adopt or reject a draft discussion topic raised from the project members.</li>
+			<li>As a user, I want to have a page to promote myself.</li>
+		</ol>
+		<h3>Presentation</h3>
+		<ol>
+			<li>As a project manager, I want to have a page to promote the project in order to collect supports.</li>
+			<li>As a project manager, I want to have a page to report the project progress to encourage the project members.</li>
+		</ol>
+		<h3>Task Management</h3>
+		<ol>
+			<li>As a project manager, I want to create a product backlog item.</li>
+			<li>As a project manager, I want to prioritize the items in the project backlog.</li>
+			<li>As a project manager, I want to define project backlog items for a sprint. They will be sprint backlog items.</li>
+			<li>As a project manager, I want to discuss about the items included in a sprint before the sprint starts.</li>
+			<li>As a project manager, I want to start a sprint.</li>
+			<li>As a project manager, I want to finalize a sprint.</li>
+			<li>As a project member, I want to refer the state of each project member.</li>
+			<li>As a project member, I want to leave messages for a sprint backlog items, which are shared among the project members.</li>
+			<li>As a project manager, I want to discuss about a finalized sprint among the project members.</li>
+		</ol>
+	</div>
+	
 </body>
 </html>

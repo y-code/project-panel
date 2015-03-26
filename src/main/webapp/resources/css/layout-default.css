@@ -12,7 +12,7 @@
 /* v1.0 | 20080212 */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; }
 body { line-height:1; }
-ol,ul { list-style:none; }
+ul { list-style: square; }
 blockquote,q { quotes:none; }
 blockquote:before,blockquote:after,q:before,q:after { content:'';content:none; }
 ins { text-decoration:none; }
@@ -127,7 +127,7 @@ li.first a {
 .main h2 {
 	background: url("site/ornament.png") no-repeat 0 50%;
 	font-size: 1.4em;
-	text-transform: lowercase;
+	/* text-transform: lowercase; */
 	text-align: center;
 	margin: 0.75em 0 1em;
 }
@@ -136,6 +136,18 @@ li.first a {
 	font-weight: normal;
 	padding: 0 1em;
 }
+
+.main h3 {
+	font-size: 1.2em;
+	text-transform: lowercase;
+	text-align: center;
+	margin: 0.75em 0 1em;
+}
+.main p {
+	width: 80%;
+	margin: 0 auto;
+}
+
 .figure {
 	float: left;
 	font-size: 10px;
