@@ -66,7 +66,8 @@
 	<div class="news">
 		<h3>26 March, 2015</h3>
 		<ul>
-			<li><u>'Project Planning' section</u> was added in <a href="${devroomUrl}">Developers' Room</a>.</li>
+			<li><u>'Project Planning' section</u> was added in <a href="${devroomUrl}#project-planning">Developers' Room</a>.</li>
+			<li><u>'User Stories' section</u> was added in <a href="${devroomUrl}#user-stories">Developers' Room</a>.</li>
 		</ul>
 	</div>
 	<div class="news">

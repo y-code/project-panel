@@ -219,6 +219,51 @@
 			<a href="https://github.com/y-code/project-panel"><img src="${gitHubImgUrl}"/></a>
 		</p>
 		
+		<a id="project-planning"></a>
 		<h2>Project Planning</h2>
-		<div id="planning"/>
-</div>
+		<div id="planning"></div>
+		
+		<a id="user-stories"></a>
+		<h2>User Stories</h2>
+		<div id="user-stories">
+			<h3>Project Planning</h3>
+			<ol>
+				<li>As a user, I want to tart a project. After this, the user will be a project owner as well as being a project member.</li>
+				<li>As a project owner, I want to finalize a project.</li>
+				<li>As a project owner, I want to clarify the purpose of the project, which means view and mission of the project.</li>
+				<li>As a project owner, I want to set up the goals for it.</li>
+				<li>As a project owner, I want to consider strategies for each goal.</li>
+				<li>As a project owner, I want to identify action plans for each strategy.</li>
+			</ol>
+			<h3>Team Management</h3>
+			<ol>
+				<li>As a project owner, I want to invite someone to my project in order to organize a project team. If the invited person accept it, he will be a project member.</li>
+				<li>As a project member, I want to recommend the project manager to invite someone to our project.</li>
+				<li>As a project owner, I want to assign a project member to a project manager.</li>
+				<li>As a user interested in a project, I want to ask the project owner to participate in it. If the project owner accept the request, he will be a project member of the project.</li>
+				<li>As a project owner, I want to make a discussion online among project members.</li>
+				<li>As a project owner, I want to notify about a new discussion to each project member.</li>
+				<li>As a project member, I want to raise a draft discussion topic, which will be discussed once the project owner adopt it.</li>
+				<li>As a project owner, I want to adopt or reject a draft discussion topic raised from the project members.</li>
+				<li>As a user, I want to have a page to promote myself.</li>
+			</ol>
+			<h3>Presentation</h3>
+			<ol>
+				<li>As a project manager, I want to have a page to promote the project in order to collect supports.</li>
+				<li>As a project manager, I want to have a page to report the project progress to encourage the project members.</li>
+			</ol>
+			<h3>Task Management</h3>
+			<ol>
+				<li>As a project manager, I want to create a product backlog item.</li>
+				<li>As a project manager, I want to prioritize the items in the project backlog.</li>
+				<li>As a project manager, I want to define project backlog items for a sprint. They will be sprint backlog items.</li>
+				<li>As a project manager, I want to discuss about the items included in a sprint before the sprint starts.</li>
+				<li>As a project manager, I want to start a sprint.</li>
+				<li>As a project manager, I want to finalize a sprint.</li>
+				<li>As a project member, I want to refer the state of each project member.</li>
+				<li>As a project member, I want to leave messages for a sprint backlog items, which are shared among the project members.</li>
+				<li>As a project manager, I want to discuss about a finalized sprint among the project members.</li>
+			</ol>
+		</div>
+</body>
+</html>
