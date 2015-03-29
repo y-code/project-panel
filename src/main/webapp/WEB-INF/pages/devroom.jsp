@@ -271,8 +271,9 @@
 	<a id="req-analysis"></a>
 	<h2>Requirements Analysis</h2>
 	<p>
-		As a first step of the requirements analysis, I used <i>User Story</i>, which is one of Agile practices.
-		The following user stories are categorized according to the goals in Project Planning above. 
+		As a first step of the requirements analysis, I used <i>User Story</i>, which is a practice of Agile Software Development.
+		The following user stories are categorized according to the goals in Project Planning above.
+		After that, I made a <i>Use Case Diagram</i> to cover the requirements that derive from the user stories. 
 	</p>
 	<div id="user-stories">
 		<h3>User Stories - Project Planning</h3>
