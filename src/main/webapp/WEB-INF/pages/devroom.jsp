@@ -3,6 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 <spring:url var="gitHubImgUrl" value="/resources/image/GitHub-Mark-Light-120px-plus.png" htmlEscape="true" />
+<spring:url var="useCaseImgUrl" value="/resources/image/UseCase-ProjectPanel.jpg" htmlEscape="true" />
 <spring:url var="jqueryUrl" value="/resources/js/jquery-2.1.3.min.js" htmlEscape="true" />
 <spring:url var="jqueryUiCssUrl" value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
 <spring:url var="jqueryUiJsUrl" value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js" />
@@ -88,6 +89,19 @@
 		#members table th {
 			background-color: #ffffff;
 		}
+		
+		div#use-case-diagram {
+			overflow: scroll;
+		}
+		div#use-case-diagram div {
+			width: 1222px;
+			height: 655px;
+		}
+		
+		div#use-case-diagram-preview {
+			width: 80%;
+			margin: 0 auto;
+		}
 	</style>
 	<script type="text/javascript" src="${jqueryUrl}"></script>
 	<script type="text/javascript" src="${jqueryUiJsUrl}"></script>
@@ -98,13 +112,34 @@
 	//<![CDATA[
 	$(document).ready(function() {
 		$.get("/projectpanel?id=3", function(data) {
-				$("#planning").html($(data).find("#projectpanel").html());
-				$.globalEval($(data).find("script").text());
-				$("#planning h2").each(function(i) {
-					$(this).replaceWith("<h3>" + $(this).html() + "</h3>");
-				});
+			$("#planning").html($(data).find("#projectpanel").html());
+			$.globalEval($(data).find("script").text());
+			$("#planning h2").each(function(i) {
+				$(this).replaceWith("<h3>" + $(this).html() + "</h3>");
 			});
+		});
+		
+		$("#use-case-diagram").dialog({
+			autoOpen: false,
+			resizable: true,
+			width: "75%",
+			height: 500,
+			modal: true,
+			show: {
+				effect: "fade",
+				duration: 1000
+			},
+			hide: {
+				effect: "fade",
+				duration: 1000
+			},
+			title: "User Case Diagram"
+		});
 	});
+	
+	var openDialog = function() {
+		$("#use-case-diagram").dialog("open");
+	};
 	//]]>
 	</script>
 	
@@ -120,8 +155,8 @@
 			<li><a href="#dev-environment">Software Development Environment</a></li>
 			<li><a href="#src-code">Source Code</a></li>
 			<li><a href="#project-planning">Project Planning</a></li>
-			<li><a href="#req-analysis">Requirements Analysis</a></li>
-			<li><a href="#"></a></li>
+			<li><a href="#req-analysis">Requirements Analysis - User Story</a></li>
+			<li><a href="#req-analysis-use-case-diagram">Requirements Analysis - Use Case Diagram</a></li>
 		</ul>
 	</div>
 	
@@ -240,34 +275,34 @@
 		The following user stories are categorized according to the goals in Project Planning above. 
 	</p>
 	<div id="user-stories">
-		<h3>Project Planning</h3>
+		<h3>User Stories - Project Planning</h3>
 		<ol>
-			<li>As a user, I want to tart a project. After this, the user will be a project owner as well as being a project member.</li>
+			<li>As a user, I want to start a new project. After this, the user will be a project owner as well as being a project member.</li>
 			<li>As a project owner, I want to finalize a project.</li>
 			<li>As a project owner, I want to clarify the purpose of the project, which means view and mission of the project.</li>
 			<li>As a project owner, I want to set up the goals for it.</li>
 			<li>As a project owner, I want to consider strategies for each goal.</li>
 			<li>As a project owner, I want to identify action plans for each strategy.</li>
 		</ol>
-		<h3>Team Management</h3>
+		<h3>User Stories - Team Management</h3>
 		<ol>
 			<li>As a project owner, I want to invite someone to my project in order to organize a project team. If the invited person accept it, he will be a project member.</li>
 			<li>As a project member, I want to recommend the project manager to invite someone to our project.</li>
 			<li>As a project owner, I want to assign a project member to a project manager.</li>
-			<li>As a user interested in a project, I want to ask the project owner to participate in it. If the project owner accept the request, he will be a project member of the project.</li>
+			<li>As a user interested in a project, I want to ask the project owner to involve me in it. If the project owner accept the request, he will be a project member of the project.</li>
 			<li>As a project owner, I want to make a discussion online among project members.</li>
 			<li>As a project owner, I want to notify about a new discussion to each project member.</li>
-			<li>As a project member, I want to raise a draft discussion topic, which will be discussed once the project owner adopt it.</li>
+			<li>As a project member, I want to draft a topic of discussion, which will be discussed on an online discussion once the project owner adopt it.</li>
 			<li>As a project owner, I want to adopt or reject a draft discussion topic raised from the project members.</li>
 			<li>As a user, I want to have a page to promote myself.</li>
 		</ol>
-		<h3>Presentation</h3>
+		<h3>User Stories - Presentation</h3>
 		<ol>
 			<li>As a project owner, I want to have a page to promote the project in order to collect supports.</li>
 			<li>As a project owner, I want to choose a presentation template for the promotion page.</li>
 			<li>As a project manager, I want to have a page to report the project progress to encourage the project members.</li>
 		</ol>
-		<h3>Task Management</h3>
+		<h3>User Stories - Task Management</h3>
 		<ol>
 			<li>As a project manager, I want to create a product backlog item.</li>
 			<li>As a project manager, I want to prioritize the items in the project backlog.</li>
@@ -279,7 +314,7 @@
 			<li>As a project member, I want to leave messages for a sprint backlog items, which are shared among the project members.</li>
 			<li>As a project manager, I want to discuss about a finalized sprint among the project members.</li>
 		</ol>
-		<h3>Business Concern</h3>
+		<h3>User Stories - Business Concern</h3>
 		<ol>
 			<li>As a user, I want to be able to upgrade my account in this website by paying quarterly charge for the services. After the upgrade, a user will be a premium user.</li>
 			<li>As a premium user, I want to pay the charge on the website online.</li>
@@ -296,6 +331,15 @@
 			<li>As a premium user, I can only have premium users as project member in owning projects.</li>
 			<li>As a premium user, I can choose a presentation template for an owning project from a variety of selections.</li>
 		</ol>
+	</div>
+	
+	<a id="req-analysis-use-case-diagram"></a>
+	<h3>Use Case Diagram</h3>
+	<div id="use-case-diagram-preview">
+		<a href="javascript: openDialog();"><img src="${useCaseImgUrl}"></img></a>
+	</div>
+	<div id="use-case-diagram">
+		<div><img src="${useCaseImgUrl}"></img></div>
 	</div>
 	
 </body>
