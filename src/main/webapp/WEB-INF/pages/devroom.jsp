@@ -195,7 +195,7 @@
 				<td class="last-child">9.3.6</td>
 			</tr>
 			<tr>
-				<th rowspan=11 width=100>Frameworks</th>
+				<th rowspan=14 width=100>Frameworks</th>
 				<th rowspan=8 width=100>Application</th>
 				<td>Spring MVC</td>
 				<td>4.1.5</td>
@@ -229,7 +229,7 @@
 				<td class="last-child"> </td>
 			</tr>
 			<tr>
-				<th rowspan=3>Testing</th>
+				<th rowspan=6>Testing</th>
 				<td>JUnit</td>
 				<td>4.1.5</td>
 			</tr>
@@ -238,19 +238,40 @@
 				<td>1.2.2</td>
 			</tr>
 			<tr>
-				<td class="last-child">Selenium</td>
+				<td>Fitnesse</td>
+				<td>20150226</td>
+			</tr>
+			<tr>
+				<td>FitSharp</td>
+				<td>2.2 for .Net 4.0</td>
+			</tr>
+			<tr>
+				<td>DbFit</td>
+				<td>3.1.0</td>
+			</tr>
+			<tr>
+				<td class="last-child">Selenium for Java &amp; C#</td>
 				<td class="last-child">2.45.0</td>
 			</tr>
 		
 			<tr>
-				<th colspan=2>IDE</th>
+				<th colspan=2 rowspan=2>IDE</th>
 				<td class="last-child">Eclipse Luna</td>
 				<td class="last-child">4.4.1</td>
+			</tr>
+			<tr>
+				<td class="last-child">Visual Studio</td>
+				<td class="last-child">2013</td>
 			</tr>
 			<tr>
 				<th colspan=2>Build Tool</th>
 				<td class="last-child">Maven</td>
 				<td class="last-child">3.2.5</td>
+			</tr>
+			<tr>
+				<th colspan=2>Revision Control Tool</th>
+				<td class="last-child">Git</td>
+				<td class="last-child">1.9.5</td>
 			</tr>
 		</table>
 	</p>
@@ -258,10 +279,10 @@
 	<a id="src-code"></a>
 	<h2>Source Code</h2>
 	<p>
-		The source code of this web application is open at GitHub. Please visit <a href="https://github.com/y-code/project-panel">this repository</a>.
+		The source code of this web application is open at GitHub. Please visit <a href="https://github.com/y-code">this repository</a>.
 	</p>
 	<p style="text-align: center">
-		<a href="https://github.com/y-code/project-panel"><img src="${gitHubImgUrl}"/></a>
+		<a href="https://github.com/y-code"><img src="${gitHubImgUrl}"/></a>
 	</p>
 	
 	<a id="project-planning"></a>
